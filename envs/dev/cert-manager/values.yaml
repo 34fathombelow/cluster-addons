@@ -2,4 +2,4 @@ cert-manager:
   image:
     tag: v1.17.1
 image:
-  tag: v1.17.2
+  tag: v1.17.3
