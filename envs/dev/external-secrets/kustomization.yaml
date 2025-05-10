@@ -8,5 +8,5 @@ helmCharts:
   version: 0.16.2
 images:
 - name: oci.external-secrets.io/external-secrets/external-secrets
-  newTag: v0.16.1
+  newTag: v0.16.2
 kind: Kustomization
