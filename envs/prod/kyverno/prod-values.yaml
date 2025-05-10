@@ -1,11 +1,19 @@
-kyverno:
-  grafana:
+grafana:
+  enabled: true
+  namespace: monitoring
+  labels:
+    grafana-dashboard: kyverno-dashboard
+
+admissionController:
+  serviceMonitor:
     enabled: true
-    namespace: monitoring
-    labels:
-      grafana-dashboard: kyverno-dashboard
-  service-monitor:
+    namespace: kyverno
+    additionalLabels:
+      release: kube-prometheus-stack
+
+backgroundController:
+  serviceMonitor:
     enabled: true
-    namespace: monitoring
+    namespace: kyverno
     additionalLabels:
       release: kube-prometheus-stack
