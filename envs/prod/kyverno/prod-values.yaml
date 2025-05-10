@@ -17,3 +17,18 @@ backgroundController:
     namespace: kyverno
     additionalLabels:
       release: kube-prometheus-stack
+
+cleanupController:
+  serviceMonitor:
+    enabled: true
+    namespace: kyverno
+    additionalLabels:
+      release: kube-prometheus-stack
+
+reportsController:
+  serviceMonitor:
+    enabled: true
+    namespace: kyverno
+    additionalLabels:
+      release: kube-prometheus-stack
+
