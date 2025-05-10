@@ -6,4 +6,7 @@ helmCharts:
   repo: https://charts.external-secrets.io
   valuesFile: prod-values.yaml
   version: 0.16.1
+images:
+- name: oci.external-secrets.io/external-secrets/external-secrets
+  newTag: v0.16.1
 kind: Kustomization
