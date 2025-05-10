@@ -1,9 +1,9 @@
 kyverno:
   grafana:
-      enabled: true
-      namespace: monitoring
-      labels:
-        grafana-dashboard: kyverno-dashboard
+    enabled: true
+    namespace: monitoring
+    labels:
+      grafana-dashboard: kyverno-dashboard
   service-monitor:
     enabled: true
     namespace: monitoring
