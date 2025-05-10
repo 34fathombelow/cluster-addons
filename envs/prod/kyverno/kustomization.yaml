@@ -7,7 +7,3 @@ helmCharts:
   includeCRDs: true
   valuesFile: prod-values.yaml
   version: 3.4.1
-#images:
-#- name: oci.external-secrets.io/external-secrets/external-secrets
-#  newTag: v0.16.2
-#kind: Kustomization
