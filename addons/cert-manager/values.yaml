@@ -1,2 +1,4 @@
-# add chart specific values
-cert-manager: {}
+cert-manager:
+  crds:
+    enabled: true
+    keep: true
