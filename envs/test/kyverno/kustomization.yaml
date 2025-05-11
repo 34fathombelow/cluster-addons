@@ -5,7 +5,7 @@ helmCharts:
   releaseName: kyverno
   repo: https://kyverno.github.io/kyverno
   includeCRDs: true
-  valuesFile: dev-values.yaml
+  valuesFile: test-values.yaml
   version: 3.4.1
 
 - name: kyverno-policies
