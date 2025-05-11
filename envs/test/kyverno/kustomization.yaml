@@ -6,12 +6,12 @@ helmCharts:
   repo: https://kyverno.github.io/kyverno
   includeCRDs: true
   valuesFile: test-values.yaml
-  version: 3.4.1
+  version: 3.1.5
 
 - name: kyverno-policies
   namespace: kyverno
   releaseName: kyverno
   repo: https://kyverno.github.io/kyverno/
-  version: 3.4.1
+  version: 3.1.5
   valuesInline:
     skipBackgroundRequests: true
