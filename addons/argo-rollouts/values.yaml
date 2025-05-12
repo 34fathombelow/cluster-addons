@@ -1,1 +1,10 @@
-rollouts: {}
+controller:
+  replicas: 1
+
+metrics:
+  enabled: true
+  serviceMonitor:
+    enabled: true
+    namespace: argo-rollouts
+    additionalLabels:
+      release: kube-prometheus-stack
