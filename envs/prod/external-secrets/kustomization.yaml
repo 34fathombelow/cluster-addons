@@ -10,3 +10,6 @@ images:
 - name: oci.external-secrets.io/external-secrets/external-secrets
   newTag: v1.1.0
 kind: Kustomization
+
+resources:
+  - bitwarden-certs.yaml
