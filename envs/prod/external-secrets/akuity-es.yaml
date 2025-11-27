@@ -27,7 +27,7 @@ metadata:
    argocd.argoproj.io/secret-type: repository
    akuity.io/secret-sync: "true"
 spec:
-  refreshInterval: 1h
+  refreshInterval: 5m
   secretStoreRef:
     name: bitwarden-secretsmanager
     kind: SecretStore
@@ -46,7 +46,7 @@ metadata:
    kargo.akuity.io/cred-type: git
    kargo.akuity.io/namespace: global
 spec:
-  refreshInterval: 1h
+  refreshInterval: 5m
   secretStoreRef:
     name: bitwarden-secretsmanager
     kind: SecretStore
