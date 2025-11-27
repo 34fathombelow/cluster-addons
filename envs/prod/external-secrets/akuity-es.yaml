@@ -35,6 +35,9 @@ spec:
     deletionPolicy: Delete
   dataFrom:
   - extract:
+      conversionStrategy: Default	
+      decodingStrategy: None
+      metadataPolicy: None
       key: "9881cb0f-9393-40e3-9006-b3a20114ec8b"
 ---
 apiVersion: external-secrets.io/v1
@@ -54,4 +57,7 @@ spec:
     deletionPolicy: Delete
   dataFrom:
   - extract:
+      conversionStrategy: Default	
+      decodingStrategy: None
+      metadataPolicy: None
       key: "47cef287-5a35-4695-b350-b3a201470f31"
