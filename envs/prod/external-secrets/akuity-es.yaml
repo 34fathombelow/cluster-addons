@@ -38,7 +38,7 @@ spec:
       conversionStrategy: Default	
       decodingStrategy: None
       metadataPolicy: None
-      key: "9881cb0f-9393-40e3-9006-b3a20114ec8b"
+      key: "e9d0506a-6d68-45f8-af88-b3a3005748b8"
 ---
 apiVersion: external-secrets.io/v1
 kind: ExternalSecret
