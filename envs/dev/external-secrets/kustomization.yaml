@@ -5,8 +5,8 @@ helmCharts:
   releaseName: external-secrets
   repo: https://charts.external-secrets.io
   valuesFile: dev-values.yaml
-  version: 0.16.2
+  version: 1.1.0
 images:
 - name: oci.external-secrets.io/external-secrets/external-secrets
-  newTag: v0.16.2
+  newTag: v1.1.0
 kind: Kustomization
