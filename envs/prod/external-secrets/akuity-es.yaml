@@ -45,7 +45,7 @@ metadata:
   namespace: akuity
   labels:
    argocd.argoproj.io/secret-type: repository
-   akuity.io/secret-sync: "true"
+   kargo.akuity.io/secret-sync: "kargo-shared-resources"
 spec:
   refreshInterval: 5m
   secretStoreRef:
