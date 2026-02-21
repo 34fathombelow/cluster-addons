@@ -19,6 +19,26 @@ spec:
       projectID: 7a7bca4a-3e6f-43cd-8b53-b3a200adabf8
 ---
 apiVersion: external-secrets.io/v1
+kind: SecretStore
+metadata:
+  name: bitwarden-secretsmanager
+  namespace: akuity-kargo
+spec:
+  provider:
+    bitwardensecretsmanager:
+      apiURL: https://vault.bitwarden.com/api
+      identityURL: https://vault.bitwarden.com/identity
+      auth:
+        secretRef:
+          credentials:
+            key: token
+            name: bitwarden-access-token
+      bitwardenServerSDKURL: https://bitwarden-sdk-server.external-secrets.svc.cluster.local:9998
+      caBundle: LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUR2RENDQXFTZ0F3SUJBZ0lSQU5sK0hDOC9IK2p5RktTdjlqQzlKNHN3RFFZSktvWklodmNOQVFFTEJRQXcKUXpFY01Cb0dBMVVFQ2hNVFpYaDBaWEp1WVd3dGMyVmpjbVYwY3k1cGJ6RWpNQ0VHQTFVRUF4TWFZMlZ5ZEMxdApZVzVoWjJWeUxXSnBkSGRoY21SbGJpMTBiSE13SGhjTk1qVXhNVEkzTVRVME9UVXhXaGNOTWpZd01qSTFNVFUwCk9UVXhXakJETVJ3d0dnWURWUVFLRXhObGVIUmxjbTVoYkMxelpXTnlaWFJ6TG1sdk1TTXdJUVlEVlFRREV4cGoKWlhKMExXMWhibUZuWlhJdFltbDBkMkZ5WkdWdUxYUnNjekNDQVNJd0RRWUpLb1pJaHZjTkFRRUJCUUFEZ2dFUApBRENDQVFvQ2dnRUJBTHhta0NacWhoMXR6MXN2aVV6WkVUb1Mxd1R3K3hrcmxDLzc4UTJDRnU0YktxL25BMUF1Ck0zZm9zZ1NBUmtJZzJPeEZVSVlMbDJvc2lUdEk3L0FudDVRazBTK3hZU3lXNlRQNHl6b1lianF4c25ZUkhOUW4KSDBpcmpDSGhPWlljbU9LNmwvR0N3R3A2Sk1mYUtjdVJqd1JISEZYVXY5KzhHeGpYSmgzSGlGWGZhNnFKSDF2WQpBdy9FWFg5S1BWcjFnSGpBbi9uUjBGS3I5YzFsZ3RqWGRaSk5JN0dsQTNuY3M5eUtrQXZKT3dhdEZhS3MveU02CkEyRjZUeUNBVnB2YkZxQzc1QVh3aEI3WW94VkY4SlRUNHlJenBBNk8ra09xbDlNQ1lZWDlVMEY3K29uclRsRzAKTERsdGRudFRJY29VU3VqSlh5LzMrL1RycVlDR09HMWdyOWNDQXdFQUFhT0JxakNCcHpBT0JnTlZIUThCQWY4RQpCQU1DQXFRd0R3WURWUjBUQVFIL0JBVXdBd0VCL3pBZEJnTlZIUTRFRmdRVW1LZnRzSTFFU1dBRlBoeks5dnhKCk8yeElXVHd3WlFZRFZSMFJCRjR3WElJM1ltbDBkMkZ5WkdWdUxYTmtheTF6WlhKMlpYSXVaWGgwWlhKdVlXd3QKYzJWamNtVjBjeTV6ZG1NdVkyeDFjM1JsY2k1c2IyTmhiSUlKYkc5allXeG9iM04waHdSL0FBQUJoeEFBQUFBQQpBQUFBQUFBQUFBQUFBQUFCTUEwR0NTcUdTSWIzRFFFQkN3VUFBNElCQVFBYk9sQ3BDVFVUbnpCem14dU5YODdMCkhlZ1FGbXE3MlQ2YTNVQXRvUHlLOTZJZEM2a0g4SitRbENFZmN3Snl0aVlQa0gybXp1aTl0RFU5dFhRTzFiakMKcnNCUTMxSHpGQUM5Ni9pRjRBVkFHbEpZZnIwMDhrNm5JRmpOT2NVb1ZvQk9aQW5TRjNVcXVHVzRUWVk5S3dvMwo4cGZqTGEyYVdZRzJJVTllc0RCRExmejBLV2xhV1VLU1VqZzRVYkxVWU12aHJXQ3U4S0t4M0s5SHBaU2ZSQVZaCkdSa3JETGI3T3JFdytHM2xWM0ozRkVIR3cvNzZRTTZSK2sxenNJMHBwRVhHdGJSMmFKYnNKU1pobzA5K0ZOWVQKOGJ4WWxWQXZSUTdiMzhjQzdCVXRiVWdEdjZxeTFpdFRZVEI1OW4xZjNxZWlvVUFzeDgzZkxwNXUwbVp6Rm9oZQotLS0tLUVORCBDRVJUSUZJQ0FURS0tLS0tCgo=
+      organizationID: 9e7eec71-0b50-4861-aa5a-aab3006ad710s
+      projectID: 7a7bca4a-3e6f-43cd-8b53-b3a200adabf8
+---
+apiVersion: external-secrets.io/v1
 kind: ExternalSecret
 metadata:
   name: cluster-addons-creds
@@ -44,7 +64,7 @@ apiVersion: external-secrets.io/v1
 kind: ExternalSecret
 metadata:
   name: kargo-helm-prom-stack
-  namespace: akuity
+  namespace: akuity-kargo
   labels:
    kargo.akuity.io/cred-type: git
    kargo.akuity.io/namespace: global
