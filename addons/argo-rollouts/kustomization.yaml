@@ -6,7 +6,7 @@ helmCharts:
   releaseName: argo-rollouts
   repo: https://argoproj.github.io/argo-helm
   valuesFile: values.yaml
-  version: 2.40.6
+  version: 2.40.9
 images:
 - name: quay.io/argoproj/argo-rollouts
-  newTag: v1.8.4
+  newTag: v1.9.0
